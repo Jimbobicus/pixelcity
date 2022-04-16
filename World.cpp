@@ -18,7 +18,7 @@
 #include <windows.h>
 #include <gl\gl.h>
 #include <gl\glu.h>
-#include <gl\glaux.h>
+#include <gl\freeglut.h>
 #include <math.h>
 #include <time.h>
 #include <vector>
