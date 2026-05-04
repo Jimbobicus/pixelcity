@@ -460,14 +460,15 @@ bool WinInit (void)
   x = IniInt ("WindowX");
   y = IniInt ("WindowY");
   style = WS_TILEDWINDOW;
-  style |= WS_MAXIMIZE;
+  //style |= WS_MAXIMIZE;
   width = IniInt ("WindowWidth");
   height = IniInt ("WindowHeight");
-  width = CLAMP (width, 800, 2048);
-  height = CLAMP (height, 600, 2048);
+  width = CLAMP (width, 800, 1280);
+  height = CLAMP (height, 600, 1024);
   half_width = width / 2;
   half_height = height / 2;
   max = IniInt ("WindowMaximized") == 1;
+  max = false;
   if (!(hwnd = CreateWindowEx (0, APP_TITLE, APP_TITLE, style,
     CW_USEDEFAULT, CW_USEDEFAULT, width, height, NULL, NULL, instance, NULL))) {
     WinPopup ("Cannot create window");
